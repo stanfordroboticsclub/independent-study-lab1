@@ -89,10 +89,7 @@ void loop()
   {
     float m0_pos = bus.Get(0).Position(); // Get the shaft position of motor 0 in radians.
     float m0_vel = bus.Get(0).Velocity(); // Get the shaft velocity of motor 0 in radians/sec.
-    Serial.print("m0_pos: ");
-    Serial.print(m0_pos);
-    Serial.print("\tm0_vel: ");
-    Serial.print(m0_vel);
+    Serial.printf("m0_pos: %f\tm0_vel: %f", m0_pos, m0_vel);
 
     float m0_current = 0.0;
     float m1_current = 0.0;
@@ -122,14 +119,8 @@ void loop()
     float m1_vel = bus.Get(1).Velocity();
     float m2_pos = bus.Get(2).Position();
     float m2_vel = bus.Get(2).Velocity();
-    Serial.print("\tm1_pos: ");
-    Serial.print(m1_pos);
-    Serial.print("\tm1_vel: ");
-    Serial.print(m1_vel);
-    Serial.print("\tm2_pos: ");
-    Serial.print(m2_pos);
-    Serial.print("\tm2_vel: ");
-    Serial.print(m2_vel);
+    Serial.printf("\tm1_pos: %f\tm1_vel: %f", m1_pos, m1_vel);
+    Serial.printf("\tm2_pos: %f\tm2_vel: %f", m2_pos, m2_vel);
     // m1_current = YOUR PID CODE
     // m2_current = YOUR PID CODE
 
